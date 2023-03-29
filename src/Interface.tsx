@@ -11,6 +11,7 @@ export interface TaskListProps{
   setSelectedId: React.Dispatch<SetStateAction<number>>
 }
 
+
 export interface TaskTodoProps{
   task:TasksProps;
   enterEditMode(): void;
@@ -21,6 +22,7 @@ export interface EditFormProps{
   closeEditMode ():void;
   selectedId: number;
 }
+
 
 export interface TasksState{
   taskList: TasksProps[]
