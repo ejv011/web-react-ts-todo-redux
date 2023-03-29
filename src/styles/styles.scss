@@ -1,0 +1,138 @@
+@import 'config';
+@import "./responsive";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+body{
+  background-color: $primary-bg-color;
+
+}
+
+[role="dialog"] {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  padding-inline: 2vmax;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  opacity: 0.85;
+  transition: 0.5s ease;
+}
+
+.container{
+  // border: 1px solid black;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // height: 50vh;
+  // margin: auto;
+  // background-color: $primary-bg-color;
+  // height: 100vh;
+  // overflow: hidden;
+  
+  h1{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background-color: $secondary-bg-color;
+    padding: 20px;
+    color: white;
+  }
+
+  .todoList{
+    @extend %flex-center;
+    flex-direction: column;
+    
+    &__task{
+      @extend %flex-center;
+      margin: 10px;
+      // D5D5D5
+      background-color: #fff;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      width: 500px;
+      padding: 10px;
+
+      // @media screen and (max-width: 480px){
+      //   background-color: red;
+
+      // }
+
+      @include screen-sm {
+        width: 300px;
+      }
+
+      &-name{
+        input{
+          margin-right: 10px;
+
+          &:checked+label{
+            text-decoration: line-through;
+
+          }
+        }
+        label{
+          position: relative;
+        }
+      }
+
+      &-buttons{
+        display: flex;
+        margin-left: auto;
+        button{
+          margin-left: 10px;
+          border-radius: 5px;
+          padding: 2px;
+          &:hover{
+            cursor: pointer;
+            border-color: #6B0078;
+          }
+        }
+      }
+
+      &:hover{
+        transform:scale(1.05);
+        transition: 0.5s ease;
+      }
+    }
+    
+  }
+
+  .todo__form{
+    @extend %flex-center;
+    margin-bottom: 1rem;
+    
+    form{
+      // background-color: #fff;
+      input{
+        @extend %form-element;
+        margin-right: 10px;
+        
+      }
+
+      button{
+        @extend %form-element;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: $secondary-bg-color;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover{
+          transform: scale(.95);
+          transition: 0.1s ease;
+          background-color: #6B0078;
+        }
+      }
+    }
+  }
+  
+
+
+}
+
+

@@ -1,0 +1,105 @@
+.container .todo__form form button, .container .todo__form form input {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border: 1px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin-bottom: 20px;
+}
+
+.container .todo__form, .container .todoList__task, .container .todoList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+[role=dialog] {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  padding-inline: 2vmax;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  opacity: 0.85;
+  transition: 0.5s ease;
+}
+
+.container h1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background-color: #380356;
+  padding: 20px;
+  color: white;
+}
+.container .todoList {
+  flex-direction: column;
+}
+.container .todoList__task {
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 500px;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  .container .todoList__task {
+    width: 300px;
+  }
+}
+.container .todoList__task-name input {
+  margin-right: 10px;
+}
+.container .todoList__task-name input:checked + label {
+  text-decoration: line-through;
+}
+.container .todoList__task-name label {
+  position: relative;
+}
+.container .todoList__task-buttons {
+  display: flex;
+  margin-left: auto;
+}
+.container .todoList__task-buttons button {
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 2px;
+}
+.container .todoList__task-buttons button:hover {
+  cursor: pointer;
+  border-color: #6B0078;
+}
+.container .todoList__task:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+.container .todo__form {
+  margin-bottom: 1rem;
+}
+.container .todo__form form input {
+  margin-right: 10px;
+}
+.container .todo__form form button {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #380356;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.container .todo__form form button:hover {
+  transform: scale(0.95);
+  transition: 0.1s ease;
+  background-color: #6B0078;
+}/*# sourceMappingURL=styles.css.map */

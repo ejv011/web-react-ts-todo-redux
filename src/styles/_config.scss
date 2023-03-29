@@ -1,0 +1,18 @@
+$font-stack: 'Poppins', sans-serif;
+$primary-bg-color: whitesmoke;
+$secondary-bg-color: #380356;
+
+%form-element{
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border: 1px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin-bottom: 20px;
+}
+
+%flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
