@@ -5,7 +5,7 @@ import { useAppDispatch } from "../app/hooks";
 import { deleteTodo, toggleTodo } from "../features/taskSlice";
 
 export const TaskTodo = ({ task, enterEditMode, setSelectedId,}: TaskTodoProps) => {
-  const [isChecked, setIsChecked] = useState(task?.completed);
+  const [isChecked, setIsChecked] = useState(task.completed);
   const dispatch = useAppDispatch();
   const handleCheckBoxChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ export const TaskTodo = ({ task, enterEditMode, setSelectedId,}: TaskTodoProps) 
           name={task.name}
           checked={isChecked}
           onChange={handleCheckBoxChange}
-          id={task.id?.toString()}
+          id={task.id.toString()}
         />
         <label htmlFor={task.id.toString()}>{task.name}</label>
       </div>

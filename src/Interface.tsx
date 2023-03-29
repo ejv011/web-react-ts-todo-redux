@@ -19,7 +19,7 @@ export interface TaskTodoProps{
 }
 
 export interface EditFormProps{
-  closeEditMode ():void;
+  closeEditMode():void;
   selectedId: number;
 }
 

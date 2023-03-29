@@ -1,5 +1,4 @@
 import { FC, useState } from "react";
-// import './styles/styles.scss'
 import { TaskList } from "./components/TaskList";
 import { TodoForm } from "./components/TodoForm";
 import { EditForm } from "./components/EditForm";

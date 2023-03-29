@@ -6,8 +6,6 @@ import { updateTodo } from "../features/taskSlice";
 import { EditFormProps } from "../Interface";
 
 export const EditForm = ({ closeEditMode, selectedId }: EditFormProps) => {
-  // // const [editedTask, setEditedTask] = useState<TasksProps | null>(null);
-  // const [updatedTaskName, setUpdatedTaskName] = useState(editedTask?.name);
   const [newTaskName, setNewTaskName] = useState<string>("");
   const dispatch = useDispatch();
   const { taskList } = useSelector((state: RootState) => state.tasks);
